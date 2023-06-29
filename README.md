@@ -15,4 +15,24 @@ Antes de implementar el código, es necesario crear la base de datos de rostros 
 5. A continuación un video que muestra como usar el código, creamos la colección y luego se muestra como agregar rostros.
    [![Alt text](https://img.youtube.com/vi/hYdUmoWpnfE/0.jpg)](https://www.youtube.com/watch?v=hYdUmoWpnfE)
 
-Una vez creada la colecciín pasamos a desplegar la aplicación en un lambda de AWS, para esto usaremos el .zip que contiene las librerias necesarias y será nuestro layer en AWS.
+Una vez creada la colecciónn pasamos a desplegar la aplicación en un lambda de AWS, para esto usaremos el layer.zip que contiene las librerias necesarias y será nuestro layer en AWS.
+1. Crear Lambda en AWS: https://youtu.be/vMQ2YbHjNI0
+2. Video para crear el layer en AWS: https://youtu.be/v-pyZzjcKGk
+3. Creación de un disparador, AWS API Gateway que se usará con el boton MT30 o Motion Alert de Meraki: https://youtu.be/FgzcocOKlhA
+4. En el archivo meraki.py que también subiremos a AWS Lambda, se deben colocar los parámetros de Meraki, el bot y sala de Webex justo después de importar las librerías.
+   ```
+      from time import sleep
+      import requests
+      import urllib.request
+      from PIL import Image
+      from io import BytesIO
+      import json
+      
+      ############### PARAMETROS PARA LLENAR ##############################
+      api_key = ''
+      mv_serial = ''
+      token_bot = ''
+      room_id = ''
+      collect_name = 'DemoCollecion'  #cambiar el nombre si se uso uno diferente al momento de crear la colección
+      ######################################################################
+   ```
