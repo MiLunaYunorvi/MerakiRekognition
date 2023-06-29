@@ -67,8 +67,8 @@ def delete_faces(lista):
     FaceIds=lista)
     
 #CREAR UNA COLECCIÓN, SOLO EJECUTAR UNA VEZ, LUEGO COMENTAR AMBAS LÍNEAS   
-#collection_name = str(input("Ingrese el nombre de la colección:  "))
-#create_collection(collection_name)
+collection_name = str(input("Ingrese el nombre de la colección:  "))
+create_collection(collection_name)
 
 #EJECUTAR CADA VEZ QUE SE QUIERA AGREGAR UN ROSTRO, PRIMERO ESCOGER LA IMAGEN 
 #Y LUEGO PROPORCIONAR UN NOMBRE
